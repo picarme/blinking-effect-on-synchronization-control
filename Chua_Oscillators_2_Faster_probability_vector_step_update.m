@@ -44,7 +44,7 @@ for k=1:length(p)
     y=zeros(steps ,N);
     z=zeros(steps ,N);
 
-    %initial conditions for Chua ’s oscillators
+    %initial conditions for Chua â€™s oscillators
     xold =0.5* rand(N,1);
     yold =0.5* rand(N,1);
     zold =0.5* rand(N,1);
@@ -105,7 +105,15 @@ for k=1:length(p)
     Emean(1,k) = Emean1;
 end
 
-%plot of the synchronization Error
-figure, plot((1:steps)*dt,E,'k '), xlabel('t'), ylabel('e(t)');
-figure, plot((1:steps)*dt,E4,'k '), xlabel('t'), ylabel('e4,12(t)');
-figure, plot(p, Emean, 'k'), xlabel('p'), ylabel('Average Error'); 
+% Plot of the synchronization Error
+figure('Name', 'Global synchronization error')
+plot((1:steps)*dt,E,'b')
+grid on, xlabel('time (t)'), ylabel('e(t)');
+
+figure('Name', 'Synchronization error between node 4 and node 12')
+plot((1:steps)*dt,E4,'r')
+grid on, xlabel('time (t)'), ylabel('e4,12(t)');
+
+figure('Name', 'Average error in function of probability of controller activation')
+plot(p, Emean, 'c')
+grid on, xlabel('p'), ylabel('Average Error'); 
