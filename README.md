@@ -5,6 +5,17 @@ This repository contains the MATLAB implementations developed for the study "Bli
 ## Project Overview
 The research focuses on a network of **20 identical Chua's Oscillators** connected by 23 edges. The main goal is to achieve synchronization between **Node 4** and **Node 12**. While the original network does not reach global synchronization, the application of an additional layer of "blinking" links—based on a specific mathematical theorem—allows these target nodes to synchronize their trajectories.
 
+<table>
+  <tr>
+    <td><img src="Images/Network.png" alt="Original Network" width="100%"/></td>
+    <td><img src="Images/Network with controllers.png" alt="Network with Blinking Links" width="100%"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Original Network</b></td>
+    <td align="center"><b>Network with Blinking Links</b></td>
+  </tr>
+</table>
+
 ## Mathematical Model
 Each node in the network is a chaotic Chua's oscillator defined by the following dimensionless equations:
 
