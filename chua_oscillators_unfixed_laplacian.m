@@ -1,4 +1,4 @@
-%Numerical integration of a network of Chua ’s oscillators with only the
+%Numerical integration of a network of Chua â€™s oscillators with only the
 %probability of having or not to having the new links, but the weight of
 %those links is different (lighter). The probability is a vector here.
 
@@ -41,7 +41,7 @@ for k=1: length(p)
     y=zeros(steps ,N);
     z=zeros(steps ,N);
 
-    %initial conditions for Chua ’s oscillators
+    %initial conditions for Chua â€™s oscillators
     xold =0.5* rand(N,1);
     yold =0.5* rand(N,1);
     zold =0.5* rand(N,1);
